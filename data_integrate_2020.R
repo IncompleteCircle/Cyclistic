@@ -45,10 +45,14 @@ tbl_05_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_05_2020))
 tbl_06_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_06_2020))
 tbl_07_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_07_2020))
 
-
+#1: Loads Part I and II of the month 08 [August]
+#2: Appends Part I and II into a single data frame for month 08 [August]
+#3: Rechanges the single data frame month's first column name too "ride_id"
+#   to match the rest.
 tbl_part_I_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_I_08_2020))
 tbl_part_II_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_II_08_2020))
 tbl_08_2020_divvy <- rbind(tbl_part_I_08_2020_divvy, tbl_part_II_08_2020_divvy)
+names(tbl_08_2020_divvy)[names(tbl_08_2020_divvy)=="ï..ride_id"] <- "ride_id"
 
 tbl_09_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_09_2020))
 tbl_10_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_10_2020))
@@ -142,7 +146,7 @@ for(iCol in 1:end_iCol){
   } else {iMonth = iMonth + 1}
   
   for(iRow in 1:end_iRow){
-    if(isTRUE(all_2020_tbl_check[iRow,iCol])==TRUE){
+    if(isTRUE(all_2020_tbl_check[iRow,iCol])==FALSE){
       print(paste("Error | Check Field ID on Table Month", iMonth, "| ", "Column:", iCol, "| Row:",iRow))
     }
   }
