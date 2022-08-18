@@ -124,7 +124,7 @@ for(index in 2:end){
 rm(index, default_col, end)
 
 #----------------------------------------------------------------------------------
-#Step 2.1: CROSS-REFERENCE ALL TABLE'S HEADERS/FIELDS
+#Step 2.2: CROSS-REFERENCE ALL TABLE'S HEADERS/FIELDS
 #----------------------------------------------------------------------------------
 #Cross-Reference Check:
 # This will go through the all_2020_tbl_check to show the user which month
