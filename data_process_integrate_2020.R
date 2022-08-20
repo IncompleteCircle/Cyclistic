@@ -52,7 +52,7 @@ tbl_07_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_07_2020))
 tbl_part_I_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_I_08_2020))
 tbl_part_II_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_II_08_2020))
 tbl_08_2020_divvy <- rbind(tbl_part_I_08_2020_divvy, tbl_part_II_08_2020_divvy)
-names(tbl_08_2020_divvy)[names(tbl_08_2020_divvy)=="ï..ride_id"] <- "ride_id"
+names(tbl_08_2020_divvy)[names(tbl_08_2020_divvy)=="Ã¯..ride_id"] <- "ride_id"
 
 tbl_09_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_09_2020))
 tbl_10_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_10_2020))
