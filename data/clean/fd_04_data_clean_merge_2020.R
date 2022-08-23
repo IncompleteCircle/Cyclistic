@@ -16,7 +16,7 @@
 
 #-------------------------------------------------------------------------------------
 #Step 1: Row Bind All Data Frames [Tables] into A Single Year 2020 Data Frame [Table]
-#
+#-------------------------------------------------------------------------------------
 #Additional Note: This will have two data frames. One including NAs and one without.
 #For educational purposes this was done to illustrate any potential differences in 
 #the data sets when analyzing them.
@@ -25,10 +25,8 @@
 tbl_2020_divvy <- rbind(tbl_04_2020_divvy, tbl_05_2020_divvy, tbl_06_2020_divvy,
                         tbl_07_2020_divvy, tbl_08_2020_divvy, tbl_09_2020_divvy,
                         tbl_10_2020_divvy, tbl_11_2020_divvy, tbl_12_2020_divvy)
+#-------------------------------------------------------------------------------------
 
-rm(tbl_04_2020_divvy, tbl_05_2020_divvy, tbl_06_2020_divvy,
-   tbl_07_2020_divvy, tbl_08_2020_divvy, tbl_09_2020_divvy,
-   tbl_10_2020_divvy, tbl_11_2020_divvy, tbl_12_2020_divvy)
 #-------------------------------------------------------------------------------------
 #Step 1.1: Row Bind Without NAs
 #-------------------------------------------------------------------------------------
@@ -46,8 +44,15 @@ tbl_12_No_NA <- na.omit(tbl_12_2020_divvy)
 tbl_2020_no_na_divvy <- rbind(tbl_04_No_NA, tbl_05_No_NA, tbl_06_No_NA,
                               tbl_07_No_NA, tbl_08_No_NA, tbl_09_No_NA,
                               tbl_10_No_NA, tbl_11_No_NA, tbl_12_No_NA)
+#-------------------------------------------------------------------------------------
 
-rm(tbl_04_No_NA, tbl_05_No_NA, tbl_06_No_NA,
+#-------------------------------------------------------------------------------------
+#Step 2: Remove all other remanent tables.
+#-------------------------------------------------------------------------------------
+rm(tbl_04_2020_divvy, tbl_05_2020_divvy, tbl_06_2020_divvy,
+   tbl_07_2020_divvy, tbl_08_2020_divvy, tbl_09_2020_divvy,
+   tbl_10_2020_divvy, tbl_11_2020_divvy, tbl_12_2020_divvy,
+   tbl_04_No_NA, tbl_05_No_NA, tbl_06_No_NA,
    tbl_07_No_NA, tbl_08_No_NA, tbl_09_No_NA,
    tbl_10_No_NA, tbl_11_No_NA, tbl_12_No_NA)
 #-------------------------------------------------------------------------------------
