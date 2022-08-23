@@ -168,3 +168,5 @@ tbl_10_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_10_2020_divvy)
 tbl_11_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_11_2020_divvy)
 tbl_12_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_12_2020_divvy)
 #----------------------------------------------------------------------------------
+rm(clean_Time_Date_Data_Format_DMY_HM, clean_Time_Date_Data_Format_YMD_HMS)
+#----------------------------------------------------------------------------------
