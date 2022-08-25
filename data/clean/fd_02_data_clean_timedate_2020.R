@@ -162,10 +162,7 @@ tbl_04_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_04_2020_divvy)
 tbl_05_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_05_2020_divvy)
 tbl_06_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_06_2020_divvy)
 tbl_07_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_07_2020_divvy)
-
 tbl_08_2020_divvy <- clean_Time_Date_Data_Format_DMY_HM(tbl_08_2020_divvy)
-#tbl_08_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_08_2020_divvy)
-
 tbl_09_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_09_2020_divvy)
 tbl_10_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_10_2020_divvy)
 tbl_11_2020_divvy <- clean_Time_Date_Data_Format_YMD_HMS(tbl_11_2020_divvy)
