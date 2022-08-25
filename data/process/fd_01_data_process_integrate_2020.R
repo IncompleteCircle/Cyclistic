@@ -41,24 +41,24 @@ fileID_12_2020 <- "1lFnVFTqHS77Foaxkto1wAPxWD9UO3PbT"
 #Note: Due to file size and Google Drive downloading limitations
 #Month 08 [August] was split into two separate files, then
 #appended into a single data frame.
-tbl_04_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_04_2020))
-tbl_05_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_05_2020))
-tbl_06_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_06_2020))
-tbl_07_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_07_2020))
+tbl_04_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_04_2020), fileEncoding = 'UTF-8-BOM')
+tbl_05_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_05_2020), fileEncoding = 'UTF-8-BOM')
+tbl_06_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_06_2020), fileEncoding = 'UTF-8-BOM')
+tbl_07_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_07_2020), fileEncoding = 'UTF-8-BOM')
 
 #1: Loads Part I and II of the month 08 [August]
 #2: Appends Part I and II into a single data frame for month 08 [August]
-#3: Rechanges the single data frame month's first column name too "ride_id"
+#3: Re-changes the single data frame month's first column name too "ride_id"
 #   to match the rest.
-tbl_part_I_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_I_08_2020))
-tbl_part_II_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_II_08_2020))
+tbl_part_I_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_I_08_2020), fileEncoding = 'UTF-8-BOM')
+tbl_part_II_08_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_part_II_08_2020), fileEncoding = 'UTF-8-BOM')
 tbl_08_2020_divvy <- rbind(tbl_part_I_08_2020_divvy, tbl_part_II_08_2020_divvy)
-names(tbl_08_2020_divvy)[names(tbl_08_2020_divvy)=="Ã¯..ride_id"] <- "ride_id"
+#names(tbl_08_2020_divvy)[names(tbl_08_2020_divvy)=="ï..ride_id"] <- "ride_id"
 
-tbl_09_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_09_2020))
-tbl_10_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_10_2020))
-tbl_11_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_11_2020))
-tbl_12_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_12_2020))
+tbl_09_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_09_2020), fileEncoding = 'UTF-8-BOM')
+tbl_10_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_10_2020), fileEncoding = 'UTF-8-BOM')
+tbl_11_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_11_2020), fileEncoding = 'UTF-8-BOM')
+tbl_12_2020_divvy <- read.csv(sprintf(fileURL_Path, fileID_12_2020), fileEncoding = 'UTF-8-BOM')
 
 rm(fileURL_Path, fileID_04_2020, fileID_05_2020, fileID_06_2020, fileID_07_2020,
    fileID_part_I_08_2020, fileID_part_II_08_2020, fileID_09_2020, fileID_10_2020, 
