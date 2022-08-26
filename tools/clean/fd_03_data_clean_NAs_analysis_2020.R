@@ -36,8 +36,13 @@ temp_tbl_12 <- c(sapply(tbl_12_2020_divvy, function(x) sum(is.na(x))))
 #----------------------------------------------------------------------------------
 #Step 2:  Create a Tibble to Store Data Frame of Missing (NA) Values Per Table
 #----------------------------------------------------------------------------------
-install.packages("tidyr")
-library("tidyr")
+package_there <- require("tidyr")
+if (package_there != TRUE){
+  install.packages("tidyr")
+  library("tidyr")
+}
+
+rm(package_there)
 
 temp_all_tbl_NA_Values <- tibble(default_names = colnames(tbl_04_2020_divvy), 
                             tbl_04_NA = temp_tbl_04,

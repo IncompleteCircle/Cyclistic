@@ -25,34 +25,23 @@
 tbl_2020_divvy <- rbind(tbl_04_2020_divvy, tbl_05_2020_divvy, tbl_06_2020_divvy,
                         tbl_07_2020_divvy, tbl_08_2020_divvy, tbl_09_2020_divvy,
                         tbl_10_2020_divvy, tbl_11_2020_divvy, tbl_12_2020_divvy)
+
+#Arbitrary Usage: Set to convert the float value of the trip duration into integer.
+#Reasoning, to round the values as the precision might not be essential.
+tbl_2020_divvy$trip_duration_min <- as.integer(tbl_2020_divvy$trip_duration_min)
 #-------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------
-#Step 1.1: Row Bind Without NAs
+#Step 1.1: Optional Second Table Without NAs Present in Data Frame Rows
 #-------------------------------------------------------------------------------------
-#Bind Here: Without NAs in the given data frames across all months [04-12].
-tbl_04_No_NA <- na.omit(tbl_04_2020_divvy)
-tbl_05_No_NA <- na.omit(tbl_05_2020_divvy)
-tbl_06_No_NA <- na.omit(tbl_06_2020_divvy)
-tbl_07_No_NA <- na.omit(tbl_07_2020_divvy)
-tbl_08_No_NA <- na.omit(tbl_08_2020_divvy)
-tbl_09_No_NA <- na.omit(tbl_09_2020_divvy)
-tbl_10_No_NA <- na.omit(tbl_10_2020_divvy)
-tbl_11_No_NA <- na.omit(tbl_11_2020_divvy)
-tbl_12_No_NA <- na.omit(tbl_12_2020_divvy)
-
-tbl_2020_no_na_divvy <- rbind(tbl_04_No_NA, tbl_05_No_NA, tbl_06_No_NA,
-                              tbl_07_No_NA, tbl_08_No_NA, tbl_09_No_NA,
-                              tbl_10_No_NA, tbl_11_No_NA, tbl_12_No_NA)
+tbl_2020_no_na_divvy <- na.omit(tbl_2020_divvy)
+print(paste("Number of NA Rows Dropped: ", nrow(tbl_2020_divvy)-nrow(tbl_2020_no_na_divvy)))
 #-------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------
-#Step 2: Remove all other remanent tables.
+#Step 2: Remove all other remaining individual tables.
 #-------------------------------------------------------------------------------------
 rm(tbl_04_2020_divvy, tbl_05_2020_divvy, tbl_06_2020_divvy,
    tbl_07_2020_divvy, tbl_08_2020_divvy, tbl_09_2020_divvy,
-   tbl_10_2020_divvy, tbl_11_2020_divvy, tbl_12_2020_divvy,
-   tbl_04_No_NA, tbl_05_No_NA, tbl_06_No_NA,
-   tbl_07_No_NA, tbl_08_No_NA, tbl_09_No_NA,
-   tbl_10_No_NA, tbl_11_No_NA, tbl_12_No_NA)
+   tbl_10_2020_divvy, tbl_11_2020_divvy, tbl_12_2020_divvy)
 #-------------------------------------------------------------------------------------
