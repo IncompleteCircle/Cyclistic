@@ -24,5 +24,6 @@ source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/to
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/clean/fd_04_data_clean_merge_2020.R")
 
 #3: Data Phase: Exploratory Data Analysis [EDA]
-#File Designation Number: 05
+#File Designation Number: 05-06
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_05_eda_divvy_bike_2020.R")
+source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_06_eda_divvy_bike_2020.R")
