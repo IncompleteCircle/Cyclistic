@@ -48,27 +48,32 @@ obtainCol_Names_Types <- function(someDF){
 }#END FUNCTION
 
 #-----------------------------------------------------------------------
-#Function: obtainCol_Names_Types
+#Function: printSomeSummaryStats
 #-----------------------------------------------------------------------
 #Arguments: someDF - Type: Data Frame
 #
-#Return: Nothing
+#Return: someList - Type: List
 #
 #Description:
 # To streamline the process and save space, the function iterates
 # through each data frame's column [field] and produces summary
 # statistics.
+#
+# Returns a list that contains all sumamry statistics for each field 
+# in the data frame that's passed into the function.
 #-----------------------------------------------------------------------
-
 printSomeSummaryStats <- function(someDF){
   index <- 1
+  someList <- NULL
   for (index in 1:ncol(someDF)){
     currentField <- colnames(someDF[index])
     print(paste("Summary Statistics: ", currentField))
     print(summary(someDF[index]))
     cat("\n")
+    someList[[index]] <- summary(someDF[index])
   }
   rm(index)
+  return(someList)
 } #END FUNCTION
 
 #-----------------------------------------------------------------------
@@ -101,5 +106,5 @@ cat("\n")
 #-----------------------------------------------------------------------
 #Step 3: Summary Statistics
 #-----------------------------------------------------------------------
-printSomeSummaryStats(tbl_2020_divvy)
+list_summary_stats_df <- printSomeSummaryStats(tbl_2020_divvy)
 rm(printSomeSummaryStats)
