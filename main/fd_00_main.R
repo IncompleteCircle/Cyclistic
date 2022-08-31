@@ -13,6 +13,10 @@ if (package_there != TRUE){
 }
 rm(package_there)
 
+#Run Time Measurements: Start Based on User's System Time [Time Zone: UTC]
+start_time <- format(Sys.time(), "%Y-%m-%d %H:%M:%S", tz = "UTC")
+start <- strptime(start_time, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
+
 #1: Data Phase: Process [Pull Data]
 #File Designation Numbers: 01
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/process/fd_01_data_process_integrate_2020.R")
@@ -27,3 +31,10 @@ source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/to
 #File Designation Number: 05-06
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_05_eda_divvy_bike_2020.R")
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_06_eda_divvy_bike_2020.R")
+
+#Run Time Measurements: End Based on User's System Time [Time Zone: UTC]
+end_time <- format(Sys.time(), "%Y-%m-%d %H:%M:%S", tz = "UTC")
+end <- strptime(end_time, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
+run_time <- end - start
+print(run_time)
+rm(end_time, end, start_time, start, run_time)
