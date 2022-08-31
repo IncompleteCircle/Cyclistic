@@ -30,12 +30,13 @@ rm(package_there)
 #Function: sum_Member_Minutes_By_Month
 #--------------------------------------------------------------------------------------------------------
 #Parameters:
-# - someDF - Type: Data Frame - Pass: By Value - Description: Data Frame passed to filter
+# - someDF - Type: Data Frame - Pass: By Value
+#   Description: Data Frame passed to filter
 #
-# - month_criteria - Type: Integer - Pass: By Value - 
+# - month_criteria - Type: Integer - Pass: By Value 
 #   Description: Month criteria for Data Frame Filtering
 #
-# - member_criteria - Type: Char/String - Pass: By Value - Description:
+# - member_criteria - Type: Char/String - Pass: By Value
 #   Description: Membership type criteria for Data Frame Filtering
 #
 #Return:
@@ -54,9 +55,23 @@ sum_Member_Minutes_By_Month <- function(someDF, month_criteria, member_criteria)
 } #END Function
 
 #--------------------------------------------------------------------------------------------------------
-#Function: 
+#Function: count_Member_Rides_By_Bike_Type
 #--------------------------------------------------------------------------------------------------------
+#Parameters:
+# - someDF - Type: Data Frame - Pass: By Value 
+#   Description: Data Frame passed to filter
 #
+# - month_criteria - Type: Integer - Pass: By Value  
+#   Description: Month criteria for Data Frame Filtering
+#
+# - member_criteria - Type: Char/String - Pass: By Value
+#   Description: Membership type criteria for Data Frame Filtering
+#
+# - bike_criteria - Type: Char/String - Pass: By Value
+#   Description: Bike type criteria for Data Frame Filtering
+#
+#Return:
+# - length(): Returns the length of the filtered data frame (number of rows)
 #--------------------------------------------------------------------------------------------------------
 count_Member_Rides_By_Bike_Type <- function(someDF, month_criteria, member_criteria, bike_criteria){
   
