@@ -30,13 +30,12 @@ rm(package_there)
 #Function: sum_Member_Minutes_By_Month
 #--------------------------------------------------------------------------------------------------------
 #Parameters:
-# - someDF - Type: Data Frame - Pass: By Value
-#   Description: Data Frame passed to filter
+# - someDF - Type: Data Frame - Pass: By Value - Description: Data Frame passed to filter
 #
-# - month_criteria - Type: Integer - Pass: By Value 
+# - month_criteria - Type: Integer - Pass: By Value - 
 #   Description: Month criteria for Data Frame Filtering
 #
-# - member_criteria - Type: Char/String - Pass: By Value
+# - member_criteria - Type: Char/String - Pass: By Value - Description:
 #   Description: Membership type criteria for Data Frame Filtering
 #
 #Return:
@@ -55,23 +54,9 @@ sum_Member_Minutes_By_Month <- function(someDF, month_criteria, member_criteria)
 } #END Function
 
 #--------------------------------------------------------------------------------------------------------
-#Function: count_Member_Rides_By_Bike_Type
+#Function: 
 #--------------------------------------------------------------------------------------------------------
-#Parameters:
-# - someDF - Type: Data Frame - Pass: By Value 
-#   Description: Data Frame passed to filter
 #
-# - month_criteria - Type: Integer - Pass: By Value  
-#   Description: Month criteria for Data Frame Filtering
-#
-# - member_criteria - Type: Char/String - Pass: By Value
-#   Description: Membership type criteria for Data Frame Filtering
-#
-# - bike_criteria - Type: Char/String - Pass: By Value
-#   Description: Bike type criteria for Data Frame Filtering
-#
-#Return:
-# - length(): Returns the length of the filtered data frame (number of rows)
 #--------------------------------------------------------------------------------------------------------
 count_Member_Rides_By_Bike_Type <- function(someDF, month_criteria, member_criteria, bike_criteria){
   
@@ -265,7 +250,58 @@ names(tbl_2020_summary) <- c("month_name", "month_num", "sum_rides",
                              "tot_member_dock_bike_used", "tot_member_classic_bike_used", "tot_member_electric_bike_used",
                              "tot_casual_dock_bike_used", "tot_casual_classic_bike_used", "tot_casual_electric_bike_used",
                              "sum_members_minutes", "sum_casual_minutes")
-#--------------------------------------------------------------------------------------------------------
-View(tbl_2020_summary)
+
 #--------------------------------------------------------------------------------------------------------
 rm(sum_Member_Minutes_By_Month, count_Member_Rides_By_Bike_Type)
+#--------------------------------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------------------------------
+#Step 4: Create a Data Frame - Store: Trips <= 24 hours AND Trips > 24 Hour [By Users]
+#--------------------------------------------------------------------------------------------------------
+#Description:
+# This section will create two additional data frames (tables) to store from the 'tbl_2020_divvy' data
+# data that will split the data into the following sections:
+#   - 1: Trip Minutes > 24 Hours [Greater than 1 days]
+#   - 2: Trip Minutes <= 24 Hours [1 days or less]
+# The reason for this is to later use the segmented data for analysis on plotting.
+#--------------------------------------------------------------------------------------------------------
+#Table Names:
+# 1: tbl_2020_day_trips
+#   - Trips <= 24 Hours
+# 2: tbl_2020_day_plus_trips
+#   - Trips > 24 Hours
+#--------------------------------------------------------------------------------------------------------
+
+#Temp Data Frame to Store Data
+tbl_day_trips <- data.frame(month_name = months(tbl_2020_divvy$started_at),
+                            month = month(tbl_2020_divvy$started_at),
+                            day_num = day(tbl_2020_divvy$started_at),
+                            minutes_ride = tbl_2020_divvy$trip_duration_min,
+                            member_type = tbl_2020_divvy$member_casual,
+                            bike_type = tbl_2020_divvy$rideable_type
+                            )
+
+#Create Subsets from the Temp Data Frame [Above]
+tbl_day_trip <- subset(tbl_day_trips, tbl_day_trips$minutes_ride <= 1440)
+tbl_day_plus_trip <- subset(tbl_day_trips, tbl_day_trips$minutes_ride > 1440)
+
+#Create vector for trips greater than 24 hours in Day Values
+days_check_out <- c(tbl_day_plus_trip$minutes_ride/1440)
+
+#Bind this total number of days used as 'days_check_out'
+tbl_day_plus_trip <- cbind(tbl_day_plus_trip,days_check_out)
+
+#Rearrange the data for plotting reasons in other files
+tbl_2020_day_trips <- tbl_day_trip %>% 
+  arrange(month, day_num)
+
+tbl_2020_day_plus_trips <- tbl_day_plus_trip %>% 
+  arrange(month, day_num)
+
+#--------------------------------------------------------------------------------------------------------
+rm(tbl_day_trip, tbl_day_trips, tbl_day_plus_trip, days_check_out)
+#--------------------------------------------------------------------------------------------------------
+View(tbl_2020_summary)
+View(tbl_2020_day_trips)
+View(tbl_2020_day_plus_trips)
+#--------------------------------------------------------------------------------------------------------
