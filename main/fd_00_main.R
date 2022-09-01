@@ -4,6 +4,9 @@
 #File:    fd_00_main.R
 #File Designation Number: 00
 #-----------------------------------------
+#Run Time Measurements: Start Based on User's System Time [Time Zone: UTC]
+start_time <- format(Sys.time(), "%Y-%m-%d %H:%M:%S", tz = "UTC")
+start <- strptime(start_time, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
 
 #Check Package Status
 package_there <- require("devtools")
@@ -12,10 +15,6 @@ if (package_there != TRUE){
   library("devtools")
 }
 rm(package_there)
-
-#Run Time Measurements: Start Based on User's System Time [Time Zone: UTC]
-start_time <- format(Sys.time(), "%Y-%m-%d %H:%M:%S", tz = "UTC")
-start <- strptime(start_time, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
 
 #1: Data Phase: Process [Pull Data]
 #File Designation Numbers: 01
@@ -31,6 +30,10 @@ source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/to
 #File Designation Number: 05-06
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_05_eda_divvy_bike_2020.R")
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_06_eda_divvy_bike_2020.R")
+
+#4: Data Phase: Visualize
+#File Designation Number: 07
+source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/plot/fd_07_plot_divvy_bike_2020.R")
 
 #Run Time Measurements: End Based on User's System Time [Time Zone: UTC]
 end_time <- format(Sys.time(), "%Y-%m-%d %H:%M:%S", tz = "UTC")
