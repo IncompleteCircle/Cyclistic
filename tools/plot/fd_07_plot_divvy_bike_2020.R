@@ -184,7 +184,7 @@ plotBAR_TOTRIDES_MEMBERS <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04:
                             geom_bar(stat="identity") +
                             geom_text(aes(label=tot_members), vjust=-.5) +
                               
-                            labs(title = "Total Number of Rides Made By Members, By Month",
+                            labs(title = "Total Number of Rides Per Month By Members",
                                  subtitle = "Dates: April 1, 2020 to December 31, 2020",
                                  caption = "Source: Divvy Bikes, 2020") +
                               
@@ -193,7 +193,7 @@ plotBAR_TOTRIDES_MEMBERS <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04:
                             
                             theme(
                               plot.title = element_text(color="black", size=14, face="bold"),
-                              plot.subtitle = element_text(color = "black", size = 12, face = "bold"),
+                              plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                               plot.caption = element_text(color = "black", size = 10, face = "italic"),
                               axis.title.x = element_text(color="#666699", size = 10, face="bold"),
                               axis.title.y = element_text(color="#232b2b", size = 10, face="bold"),
@@ -207,7 +207,7 @@ plotBAR_TOTRIDES_CASUAL <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: 
                             geom_bar(stat="identity") +
                             geom_text(aes(label=tot_casual), vjust=-.5) +
                             
-                            labs(title = "Total Number of Rides Made By Casual Users, By Month",
+                            labs(title = "Total Number of Rides Per Month By Casual Riders",
                                  subtitle = "Dates: April 1, 2020 to December 31, 2020",
                                  caption = "Source: Divvy Bikes, 2020") +
                             
@@ -216,7 +216,7 @@ plotBAR_TOTRIDES_CASUAL <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: 
                             
                             theme(
                               plot.title = element_text(color="black", size=14, face="bold"),
-                              plot.subtitle = element_text(color = "black", size = 12, face = "bold"),
+                              plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                               plot.caption = element_text(color = "black", size = 10, face = "italic"),
                               axis.title.x = element_text(color="#666699", size = 10, face="bold"),
                               axis.title.y = element_text(color="#232b2b", size = 10, face="bold"),
@@ -230,8 +230,8 @@ plotBAR_TOTRIDES_ALL <-  ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: AP
                             geom_bar(stat="identity") +
                             geom_text(aes(label=sum_rides), vjust=-.5) +
                             
-                            labs(title = "Total Number of Rides Made, By Month",
-                                 subtitle = "Dates: April 1, 2020 to December 31, 2020 | Both: Casual + Members",
+                            labs(title = "Total Number of Rides Per Month",
+                                 subtitle = "Dates: April 1, 2020 to December 31, 2020",
                                  caption = "Source: Divvy Bikes, 2020") +
                             
                             xlab("Months") +
@@ -239,7 +239,7 @@ plotBAR_TOTRIDES_ALL <-  ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: AP
                             
                             theme(
                               plot.title = element_text(color="black", size=14, face="bold"),
-                              plot.subtitle = element_text(color = "black", size = 12, face = "bold"),
+                              plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                               plot.caption = element_text(color = "black", size = 10, face = "italic"),
                               axis.title.x = element_text(color="#666699", size = 10, face="bold"),
                               axis.title.y = element_text(color="#232b2b", size = 10, face="bold"),
@@ -258,15 +258,15 @@ plotBAR_TOTMIN_ALL <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: APR",
                           geom_text(aes(label=sum_minutes), vjust=-.5) +
                           
                           labs(title = "Total Minutes Rode Per Month",
-                               subtitle = "Dates: April 1, 2020 to December 31, 2020 | Both: Casual + Members",
+                               subtitle = "Dates: April 1, 2020 to December 31, 2020",
                                caption = "Source: Divvy Bikes, 2020") +
                           
                           xlab("Months") +
-                          ylab("Sum of Minutes")+
+                          ylab("Total Minutes")+
                           
                           theme(
                             plot.title = element_text(color="black", size=14, face="bold"),
-                            plot.subtitle = element_text(color = "black", size = 10, face = "bold"),
+                            plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                             plot.caption = element_text(color = "black", size = 10, face = "italic"),
                             axis.title.x = element_text(color="#666699", size = 10, face="bold"),
                             axis.title.y = element_text(color="#232b2b", size = 10, face="bold"),
@@ -285,11 +285,11 @@ plotBAR_TOTMIN_MEMBERS <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: A
                                caption = "Source: Divvy Bikes, 2020") +
                           
                           xlab("Months") +
-                          ylab("Sum of Minutes")+
+                          ylab("Total Minutes")+
                           
                           theme(
                             plot.title = element_text(color="black", size=14, face="bold"),
-                            plot.subtitle = element_text(color = "black", size = 10, face = "bold"),
+                            plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                             plot.caption = element_text(color = "black", size = 10, face = "italic"),
                             axis.title.x = element_text(color="#666699", size=10, face="bold"),
                             axis.title.y = element_text(color="#232b2b", size=10, face="bold"),
@@ -308,11 +308,11 @@ plotBAR_TOTMIN_CASUAL <-  ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: A
                                caption = "Source: Divvy Bikes, 2020") +
                           
                           xlab("Months") +
-                          ylab("Sum of Minutes")+
+                          ylab("Total Minutes")+
                           
                           theme(
                             plot.title = element_text(color="black", size=14, face="bold"),
-                            plot.subtitle = element_text(color = "black", size = 10, face = "bold"),
+                            plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                             plot.caption = element_text(color = "black", size = 10, face = "italic"),
                             axis.title.x = element_text(color="#666699", size=10, face="bold"),
                             axis.title.y = element_text(color="#232b2b", size=10, face="bold"),
@@ -335,10 +335,96 @@ plotBAR_AVGMIN_ALL <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: APR",
                       
                       theme(
                         plot.title = element_text(color="black", size=14, face="bold"),
-                        plot.subtitle = element_text(color = "black", size = 10, face = "bold"),
+                        plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
                         plot.caption = element_text(color = "black", size = 10, face = "italic"),
                         axis.title.x = element_text(color="#666699", size=10, face="bold"),
                         axis.title.y = element_text(color="#232b2b", size=10, face="bold"),
                         legend.title = element_blank(),
                         axis.text.x = element_text(angle = 0))
 ############################################################################################################
+
+#########################################################################################################
+#Ad-Hoc Data Frame Manipulation + Plots
+#########################################################################################################
+#Obtain Casual Riders' Average Number of Minutes Rode Per Month
+avg_min_casual <- as.numeric(c(rep(0, times=nrow(tbl_2020_summary))))
+
+i <- 1
+numRows <- nrow(tbl_2020_summary)
+
+for (i in 1:numRows){
+  avg_min_casual[i] = (tbl_2020_summary$sum_casual_minutes[i]/tbl_2020_summary$tot_casual[i])
+}
+
+avg_min_casual <- format(round(avg_min_casual, digits = 2))
+avg_min_casual <- as.numeric(avg_min_casual)
+rm(i)
+
+#Obtain Members Riders' Average Number of Minutes Rode Per Month
+avg_min_members <- as.numeric(c(rep(0, times=nrow(tbl_2020_summary))))
+
+i <- 1
+numRows <- nrow(tbl_2020_summary)
+
+for (i in 1:numRows){
+  avg_min_members[i] = (tbl_2020_summary$sum_members_minutes[i]/tbl_2020_summary$tot_members[i])
+}
+
+avg_min_members <- format(round(avg_min_members, digits = 2))
+avg_min_members <- as.numeric(avg_min_members)
+rm(i)
+
+tbl_2020_summary <- cbind(tbl_2020_summary,
+                          avg_minutes_per_ride_casual = avg_min_casual,
+                          avg_minutes_per_ride_members = avg_min_members)
+
+rm(numRows, avg_min_casual, avg_min_members)
+#########################################################################################################
+#Plot Additional Average Min Per Month geom_bar charts
+#########################################################################################################
+#avg_minutes_per_ride_casual plotted
+plotBAR_AVGMIN_CASUAL <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: APR", "05: MAY", "06: JUN",
+                                                                      "07: JUL", "08: AUG", "09: SEP",
+                                                                      "10: OCT", "11: NOV", "12: DEC"), y = avg_minutes_per_ride_casual)) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=avg_minutes_per_ride_casual), vjust=-.5) +                    
+  
+  labs(title = "Average Minutes Per Ride Per Month By Casual Riders",
+       subtitle = "Dates: April 1, 2020 to December 31, 2020",
+       caption = "Source: Divvy Bikes, 2020") +
+  
+  xlab("Months") +
+  ylab("Average Minutes")+
+  
+  theme(
+    plot.title = element_text(color="black", size=14, face="bold"),
+    plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
+    plot.caption = element_text(color = "black", size = 10, face = "italic"),
+    axis.title.x = element_text(color="#666699", size=10, face="bold"),
+    axis.title.y = element_text(color="#232b2b", size=10, face="bold"),
+    legend.title = element_blank(),
+    axis.text.x = element_text(angle = 0))
+
+#avg_minutes_per_ride_members plotted
+plotBAR_AVGMIN_MEMBERS <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: APR", "05: MAY", "06: JUN",
+                                                                         "07: JUL", "08: AUG", "09: SEP",
+                                                                         "10: OCT", "11: NOV", "12: DEC"), y = avg_minutes_per_ride_members)) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=avg_minutes_per_ride_members), vjust=-.5) +                    
+  
+  labs(title = "Average Minutes Per Ride Per Month By Members",
+       subtitle = "Dates: April 1, 2020 to December 31, 2020",
+       caption = "Source: Divvy Bikes, 2020") +
+  
+  xlab("Months") +
+  ylab("Average Minutes")+
+  
+  theme(
+    plot.title = element_text(color="black", size=14, face="bold"),
+    plot.subtitle = element_text(color = "black", size = 11, face = "bold"),
+    plot.caption = element_text(color = "black", size = 10, face = "italic"),
+    axis.title.x = element_text(color="#666699", size=10, face="bold"),
+    axis.title.y = element_text(color="#232b2b", size=10, face="bold"),
+    legend.title = element_blank(),
+    axis.text.x = element_text(angle = 0))
+#########################################################################################################
