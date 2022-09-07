@@ -2,7 +2,7 @@
 #Creator: SJT
 #Date: 06 SEP 2022
 #File: fd_08_plot_divvy_bike_2020
-#File Designation Number: 07
+#File Designation Number: 08
 #==================================================================================================================================
 #Data Phase Section: Visualization
 #==================================================================================================================================
@@ -11,7 +11,7 @@
 # These plots will be used later in the final report in the markdown
 # file.
 #
-# This file is also an extension of file 07, with continued plots.
+# This file is also an extension of file 07, with continued (geom_bar) plots.
 # Split the file into two for maintenance reasons.
 #==================================================================================================================================
 #Check Package Status
