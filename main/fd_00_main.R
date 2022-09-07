@@ -32,8 +32,9 @@ source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/to
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/eda/fd_06_eda_divvy_bike_2020.R")
 
 #4: Data Phase: Visualize
-#File Designation Number: 07
+#File Designation Number: 07-08
 source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/plot/fd_07_plot_divvy_bike_2020.R")
+source_url("https://raw.githubusercontent.com/IncompleteCircle/Cyclistic/main/tools/plot/fd_08_plot_divvy_bike_2020.R")
 
 #Run Time Measurements: End Based on User's System Time [Time Zone: UTC]
 end_time <- format(Sys.time(), "%Y-%m-%d %H:%M:%S", tz = "UTC")
