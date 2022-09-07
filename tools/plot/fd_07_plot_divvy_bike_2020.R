@@ -174,20 +174,6 @@ plotHIST_more_24H_by_bike_type <-
 #Additional Details:
 # These plots will be utilized in the markdown file at the end.
 #-----------------------------------------------------------------------
-#General/Standard Variables Used for the (gg)plots.
-date_x_axis <- c("04: APR", "05: MAY", "06: JUN",
-                 "07: JUL", "08: AUG", "09: SEP",
-                 "10: OCT", "11: NOV", "12: DEC")
-
-gg_std_theme <- theme(
-                      plot.title = element_text(color="black", size=14, face="bold"),
-                      plot.subtitle = element_text(color = "black", size = 12, face = "bold"),
-                      plot.caption = element_text(color = "black", size = 10, face = "italic"),
-                      axis.title.x = element_text(color="#666699", size = 10, face="bold"),
-                      axis.title.y = element_text(color="#232b2b", size = 10, face="bold"),
-                      legend.title = element_blank(),
-                      axis.text.x = element_text(angle = 0))
-
 ############################################################################################################
 #Plot: 1.a.1: Total Rides By Members and Month
 #Fields: {tot_members, tot_casual, sum_rides}

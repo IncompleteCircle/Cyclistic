@@ -81,7 +81,7 @@ printSomeSummaryStats <- function(someDF){
 #-----------------------------------------------------------------------
 #Step 1: Obtain Column Names and Data Types
 #-----------------------------------------------------------------------
-col_names_and_types <- obtainCol_Names_Types(tbl_2020_divvy)
+#col_names_and_types <- obtainCol_Names_Types(tbl_2020_divvy)
 rm(obtainCol_Names_Types)
 
 #-----------------------------------------------------------------------
