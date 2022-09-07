@@ -11,7 +11,7 @@
 # These plots will be used later in the final report in the markdown
 # file.
 #
-# This file is also an extension of file 07, with continued (geom_bar) plots.
+# This file is also an extension of file 07, with continued plots.
 # Split the file into two for maintenance reasons.
 #==================================================================================================================================
 #Check Package Status

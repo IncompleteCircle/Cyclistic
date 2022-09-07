@@ -4,6 +4,8 @@
 #File: fd_05_eda_divvy_bike_2020
 #File Designation Number: 05
 #-----------------------------------------------------------------------
+#Data Phase Section: Exploratory Data Analysis/Analyze
+#-----------------------------------------------------------------------
 
 #-----------------------------------------------------------------------
 #Function: obtainCol_Names_Types
@@ -106,5 +108,5 @@ cat("\n")
 #-----------------------------------------------------------------------
 #Step 3: Summary Statistics
 #-----------------------------------------------------------------------
-list_summary_stats_df <- printSomeSummaryStats(tbl_2020_divvy)
+list_summary_stats_tbl_2020_divvy <- printSomeSummaryStats(tbl_2020_divvy)
 rm(printSomeSummaryStats)

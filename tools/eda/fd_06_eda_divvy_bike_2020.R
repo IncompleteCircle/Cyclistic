@@ -7,8 +7,8 @@
 #Data Phase Section: Exploratory Data Analysis/Analyze
 #-----------------------------------------------------------------------
 #Description:
-# The role of this file, is to provide summary tables & visualizations 
-# for the report. A summary table will be used for the markdown file
+# The role of this file, is to provide summary tables for the report. 
+# A summary table will be used for the markdown file
 # Variables will store plots that will later be implemented into the 
 # final user report for stakeholders.
 #-----------------------------------------------------------------------
@@ -54,9 +54,21 @@ sum_Member_Minutes_By_Month <- function(someDF, month_criteria, member_criteria)
 } #END Function
 
 #--------------------------------------------------------------------------------------------------------
-#Function: 
+#Function: count_Member_Rides_By_Bike_Type
 #--------------------------------------------------------------------------------------------------------
+#Parameters:
+# - someDF - Type: Data Frame - Pass: By Value - Description: Data Frame passed to filter
 #
+# - month_criteria - Type: Integer - Pass: By Value
+#   Description: Month criteria for Data Frame Filtering
+#
+# - member_criteria - Type: Char/String - Pass: By Value
+#   Description: Membership type criteria for Data Frame Filtering
+#
+# - bike_criteria - Type: Char/String - Pass: By Value
+#
+#Return:
+# - sum(): Returns the count of the bike and member types by the given criteria
 #--------------------------------------------------------------------------------------------------------
 count_Member_Rides_By_Bike_Type <- function(someDF, month_criteria, member_criteria, bike_criteria){
   
@@ -200,7 +212,10 @@ for(index in 1:nrow(tbl_2020_summary)){
   tbl_2020_summary$avg_min_per_ride[index] = temp_hold
 }
 rm(index, temp_hold)
-tbl_2020_summary$avg_min_per_ride <- as.double(tbl_2020_summary$avg_min_per_ride,length=0)
+
+#Format Average Min Per Ride Column to Two Decimal Points
+tbl_2020_summary$avg_min_per_ride <- as.numeric(tbl_2020_summary$avg_min_per_ride)
+tbl_2020_summary[,'avg_min_per_ride'] = round(tbl_2020_summary[,'avg_min_per_ride'],2)
 
 #Obtain Bike Usage By Bike Type + Member Type
 for(index in 1:nrow(tbl_2020_summary)){
@@ -297,11 +312,6 @@ tbl_2020_day_trips <- tbl_day_trip %>%
 
 tbl_2020_day_plus_trips <- tbl_day_plus_trip %>% 
   arrange(month, day_num)
-
 #--------------------------------------------------------------------------------------------------------
 rm(tbl_day_trip, tbl_day_trips, tbl_day_plus_trip, days_check_out)
-#--------------------------------------------------------------------------------------------------------
-View(tbl_2020_summary)
-View(tbl_2020_day_trips)
-View(tbl_2020_day_plus_trips)
 #--------------------------------------------------------------------------------------------------------
