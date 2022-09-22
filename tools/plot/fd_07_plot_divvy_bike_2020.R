@@ -428,20 +428,3 @@ plotBAR_AVGMIN_MEMBERS <- ggplot(data=tbl_2020_summary, mapping=aes(x = c("04: A
     legend.title = element_blank(),
     axis.text.x = element_text(angle = 0))
 #########################################################################################################
-
-
-#Extra Cleaning/Organizing
-listGGPLOT_BAR_MEMBERS <- list(plotBAR_AVGMIN_MEMBERS, plotBAR_TOTMIN_MEMBERS, plotBAR_TOTRIDES_MEMBERS)
-listGGPLOT_BAR_CASUAL <- list(plotBAR_AVGMIN_CASUAL, plotBAR_TOTMIN_CASUAL, plotBAR_TOTRIDES_CASUAL)
-listGGPLOT_BAR_ALL <- list(plotBAR_AVGMIN_ALL, plotBAR_TOTMIN_ALL, plotBAR_TOTRIDES_ALL)
-listGGHIST_LESS_24HR <- list(plotHIST_less_24H_by_bike_type, plotHIST_less_24H_by_member_type)
-listGGHIST_MORE_24HR <- list(plotHIST_more_24H_by_bike_type, plotHIST_more_24H_by_member_type)
-
-#Remove additional gg plot files to save environment space/tidy up
-rm(
-  plotBAR_AVGMIN_MEMBERS, plotBAR_TOTMIN_MEMBERS, plotBAR_TOTRIDES_MEMBERS,
-  plotBAR_AVGMIN_CASUAL, plotBAR_TOTMIN_CASUAL, plotBAR_TOTRIDES_CASUAL,
-  plotBAR_AVGMIN_ALL, plotBAR_TOTMIN_ALL, plotBAR_TOTRIDES_ALL,
-  plotHIST_less_24H_by_bike_type, plotHIST_less_24H_by_member_type,
-  plotHIST_more_24H_by_bike_type, plotHIST_more_24H_by_member_type
-  )
