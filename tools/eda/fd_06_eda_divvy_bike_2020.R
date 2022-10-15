@@ -290,7 +290,7 @@ rm(sum_Member_Minutes_By_Month, count_Member_Rides_By_Bike_Type)
 #Temp Data Frame to Store Data
 tbl_day_trips <- data.frame(month_name = months(tbl_2020_divvy$started_at),
                             month = month(tbl_2020_divvy$started_at),
-                            day_num = day(tbl_2020_divvy$started_at),
+                            day_num = mday(tbl_2020_divvy$started_at),
                             minutes_ride = tbl_2020_divvy$trip_duration_min,
                             member_type = tbl_2020_divvy$member_casual,
                             bike_type = tbl_2020_divvy$rideable_type
