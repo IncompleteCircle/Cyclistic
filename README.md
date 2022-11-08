@@ -9,10 +9,10 @@
 ------------
 
 #### Abstract
-This project is aimed at illustrating the usage of data analytics and the data analysis cycle through a business case study, provided by Coursera-Google’s data analytics professional certification course’s capstone project. The capstone is focused on developing an ad hoc descriptive analysis for a fictional company, Cyclistic, however the analysis is based on real-world time series data provided by Divvy bike-sharing services in Chicago, Illinois.
+This project is aimed at illustrating the usage of data analytics and the data analysis cycle through a business case study, provided by Coursera-Google’s data analytics professional certification course’s capstone project. The capstone is focused on developing an ad hoc descriptive analysis for a fictional company, Cyclistic, however the analysis is based on real world time series data provided by Divvy bike-sharing services in Chicago, Illinois.
 
 ------------
-**Language:** R <br/>
+**Language:** R
 **Packages:**
 - devtools
 - tidyr
@@ -22,7 +22,14 @@ This project is aimed at illustrating the usage of data analytics and the data a
 - ggplot2
 
 ------------
+
+#### Published Report
+The finished submitted report can be found in the file directory, [**report**](https://github.com/IncompleteCircle/Cyclistic/tree/main/report), titled *2020 Market Analytics Report.* <br/>
+To read please click the link here to access it, [**2020 Cyclistic Market Analytics Report**](https://github.com/IncompleteCircle/Cyclistic/blob/main/report/Case%20Study%20Cyclists%20Marketing%20Analytics%20Report.pdf).
+
+------------
 #### Project Repository Structure
+
 **Directory:** [main](https://github.com/IncompleteCircle/Cyclistic/tree/main/main)
 - **File**: [fd_00_main.R](https://github.com/IncompleteCircle/Cyclistic/blob/main/main/fd_00_main.R)
 
