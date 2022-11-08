@@ -69,3 +69,5 @@ The project repository structure is designed around the logic of the data analys
 	- **Description**: Stores the histogram images that were developed with the ggplot2 package.
 	
 ------------
+
+**Raw Data Source**: [2020 Divvy Bike Sharing Data](https://drive.google.com/drive/folders/1bDGiVeiac-Fc9gLqCTOEFHNntMtNsbbT)
