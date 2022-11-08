@@ -54,3 +54,15 @@ The project repository structure is designed around the logic of the data analys
 	- **File**: [fd_08_plot_divvy-bike_2020.R](https://github.com/IncompleteCircle/Cyclistic/blob/main/tools/plot/fd_08_plot_divvy_bike_2020.R)
 
 ------------
+
+**Directory:** [environment_data_src](https://github.com/IncompleteCircle/Cyclistic/tree/main/environment_data_src)
+- **Description**: R environment data source. For users who want to investigate the processed, analyzed, and plotted data without having to run the main script.
+
+**Directory:** [images](https://github.com/IncompleteCircle/Cyclistic/tree/main/images)
+- **Description**: Data visualization directory that stores the finished plots that are used in the final report.
+- **Sub Directory**: [geom_bar](https://github.com/IncompleteCircle/Cyclistic/tree/main/images/geom_bar)
+	- **Description**: Stores the bar chart images that were developed with the ggplot2 package.
+- **Sub Directory**: [geom_hist](https://github.com/IncompleteCircle/Cyclistic/tree/main/images/geom_hist)
+	- **Description**: Stores the histogram images that were developed with the ggplot2 package.
+	
+------------
