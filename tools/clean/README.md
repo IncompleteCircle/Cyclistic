@@ -44,7 +44,6 @@
 
 
 ------------
-
-![image](https://user-images.githubusercontent.com/43623335/200710186-e3c643bb-3345-44e9-91cc-01fd49c19378.png)
+![image](https://user-images.githubusercontent.com/43623335/200710578-e3172245-e3fc-4fad-bcbd-abc0791e15cd.png)
 
 
