@@ -5,7 +5,7 @@
 
 **Creator**: S. Taheri <br/>
 **Last Update**: 20 AUG 2022 <br/>
-**Data Analytics Phase**: Process
+**Data Analysis Phase**: Process
 
 ------------
 
