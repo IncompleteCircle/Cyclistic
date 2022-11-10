@@ -30,7 +30,7 @@ To read please click the link here to access it, [**2020 Cyclistic Market Analyt
 ------------
 #### Project Repository Structure
 The project repository structure is designed around the logic of the data analysis six-phase structure. The exception is directory, **main**, where the directory is used to store as a main hub for running all of the other files at once. The project design was focused on using a modular top-down design for each sequential analysis phase. The **"Ask"** and **"Act"** phases are found directly in the report, repsectively in the beginning and at the end. <br/>
-![image](https://user-images.githubusercontent.com/43623335/200609266-1c0c78ac-7c09-4cea-91e2-8535e9ebccac.png)
+![image](https://user-images.githubusercontent.com/43623335/201227772-c50948bf-5f44-43fc-ae91-758043e42dc2.png)
 
 **Directory:** [main](https://github.com/IncompleteCircle/Cyclistic/tree/main/main)
 - **File**: [fd_00_main.R](https://github.com/IncompleteCircle/Cyclistic/blob/main/main/fd_00_main.R)
