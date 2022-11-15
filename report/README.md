@@ -1,4 +1,50 @@
-This folder contains the final report produced from the data analysis for Google Data Analytics Certification Capstone Project.
-In the PDF file you will find the final report, which contains the data analysis cycle, analysis and visualizations.
+![image](https://user-images.githubusercontent.com/43623335/201995870-f1adf081-584b-4806-99ae-0284f163c9ff.png)
 
-![image](https://user-images.githubusercontent.com/43623335/201995744-b2aff1c6-a0ee-47d6-9236-727482401b1d.png)
+------------
+
+### **Table of Contents**
+
+- **Introduction** <br/>
+- **Background** <br/>
+- **Phase: Ask** <br/>
+	- *Stakeholders*
+	- *Stakeholders Request*
+	- *Business Objective*
+	- *Three Primary Guiding Factors* <br/>
+- **Phase: Prepare** <br/>
+	- Data
+	- *Process*
+	- *Clean*
+	- *Merge* <br/>
+- **Phase: Analyze** <br/>
+	- *Exploratory Data Analysis*
+		- Structure
+		- Table Field Summary Statistics
+	- *Table Analysis - Summary Statistics* <br/>
+- **Phase: Share** <br/>
+	- *Technical Details*
+	- *Bar Plots: Both Member and Bike Types by Month*
+	- *Bar Plots: Casual Riders Analysis by Month*
+	- *Bar Plots: Annual Members Riders Analysis by Month*
+	- *Weekday Summary Data - By User Type*
+		- Bar Plot: Weekday Data - Total Number of Rides
+		- Bar Plot: Weekday Data - Total Minutes Rode Per Day
+		- Bar Plot: Weekday Data - Average Minutes Rode Per Day
+	- *Weekday Summary Data - By Bike Type*
+		- Bar Plot: Weekday Data - Total Number of Rides
+		- Bar Plot: Weekday Data - Total Minutes Rode Per Day
+		- Bar Plot: Weekday Data - Average Minutes Rode Per Day
+	- *Distribution of Usage Less Than 24 Hours (1,440 minutes)*
+		- Distribution of Trips - By Bike Types
+		- Distribution of Trips - By User Types <br/>
+- **Phase: Act** <br/>
+	- *Recommendations*
+		- Target Ads
+		- Surveys
+	- *Cost-Efficiency: Restructuring Bike Type Availability* <br/>
+- **Appendix** <br/>
+	- *Links*
+
+
+------------
+
